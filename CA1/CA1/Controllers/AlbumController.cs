@@ -19,11 +19,23 @@ namespace CA1.Controllers
         //
         // GET: /Album/Details/5
 
+        //get albums
         public ActionResult Details(int id)
         { 
             var x= from a in _db.Albums
                     join o in _db.OrderDetails on a.AlbumId equals o.AlbumId
                     where o.OrderId == id
+                    select a;
+
+            return View(x);
+        }
+
+        //get artists
+        public ActionResult ArtistDetails(int id = 0)
+        {
+            var x = from a in _db.Artists
+                    join alb in _db.Albums on a.ArtistId equals alb.ArtistId
+                    where alb.AlbumId == id
                     select a;
 
             return View(x);
