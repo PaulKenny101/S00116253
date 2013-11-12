@@ -20,7 +20,7 @@ namespace CA1.Controllers
         //
         // GET: /Artist/Details/5
 
-        public ActionResult Details(int id)
+        public ActionResult Details(int id=0)
         {
             var x = from a in _db.Artists
                     join alb in _db.Albums on a.ArtistId equals alb.ArtistId
