@@ -1,8 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using PagedList;
 
 namespace CA2.Controllers
 {
@@ -11,18 +13,18 @@ namespace CA2.Controllers
     //create db link
        private northwndEntities _db = new northwndEntities();
 
-        //db is disposed of when finished using
-       protected override void Dispose(bool disposing)
-       {
-           _db.Dispose();
-       }
-
+      
         //
         // GET: /Home/
 
-        public ActionResult Index()
+        public ActionResult Index(int? pageNumb)
         {
+            //number of results on page
+            int pageNumber = (pageNumb ?? 1);
+            int resultsReturned = 10;
+
             var x = _db.Orders;
+         
             return View(x);
         }
 
@@ -62,54 +64,90 @@ namespace CA2.Controllers
 
         //
         // GET: /Home/Edit/5
-
+        // GET: /Home/Edit/5
+        [HttpGet]
         public ActionResult Edit(int id)
         {
-            return View();
+            Order order = _db.Orders.Find(id);
+            if (order == null)
+            {
+                return HttpNotFound();
+            }
+
+            return View(order);
         }
 
         //
         // POST: /Home/Edit/5
 
         [HttpPost]
-        public ActionResult Edit(int id, FormCollection collection)
+        [ValidateAntiForgeryToken]
+        public ActionResult Edit(Order order)
         {
             try
             {
                 // TODO: Add update logic here
+                if (ModelState.IsValid)
+                {
+                    _db.Entry(order).State = EntityState.Modified;
+                    _db.SaveChanges();
 
-                return RedirectToAction("Index");
+                    return RedirectToAction("Index");
+                }
+
+                return View(order);
+
+
             }
             catch
             {
-                return View();
+                return View("Error");
             }
         }
 
         //
-        // GET: /Home/Delete/5
+        // GET: /Order/Delete/5
 
-        public ActionResult Delete(int id)
+        public ActionResult Delete(int id = 0)
         {
-            return View();
+            Order order = _db.Orders.Find(id);
+            if (order == null)
+            {
+                return HttpNotFound();
+            }
+
+            return View(order);
         }
 
         //
         // POST: /Home/Delete/5
 
-        [HttpPost]
-        public ActionResult Delete(int id, FormCollection collection)
-        {
-            try
-            {
-                // TODO: Add delete logic here
 
-                return RedirectToAction("Index");
-            }
-            catch
+        [HttpPost, ActionName("Delete")]
+       
+        public ActionResult ConfirmDelete(int id = 0)
+        {
+
+            // TODO: Add delete logic here
+            Order order = _db.Orders.Find(id);
+            if (order == null)
             {
-                return View();
+                return HttpNotFound();
             }
+            _db.Orders.Remove(order);
+            _db.SaveChanges();
+            return RedirectToAction("Index");
+
+
         }
+
+        //db is disposed of when finished using
+        protected override void Dispose(bool disposing)
+        {
+            _db.Dispose();
+            base.Dispose(disposing);
+        }
+
+        
     }
 }
