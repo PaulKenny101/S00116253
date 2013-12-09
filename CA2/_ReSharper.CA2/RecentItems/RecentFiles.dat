@@ -1,16 +1,19 @@
 ﻿<RecentFiles>
   <RecentFiles>
-    <File id="44A07FBC-06F6-45D4-9A4E-B5A80426628B/d:Views/f:_ViewStart.cshtml" caret="8" fromTop="1" />
     <File id="44A07FBC-06F6-45D4-9A4E-B5A80426628B/d:Views/d:Shared/f:_Layout.cshtml" caret="401" fromTop="14" />
     <File id="44A07FBC-06F6-45D4-9A4E-B5A80426628B/f:Order.cs" caret="657" fromTop="15" />
-    <File id="44A07FBC-06F6-45D4-9A4E-B5A80426628B/d:Views/d:Home/f:Delete.cshtml" caret="0" fromTop="0" />
-    <File id="44A07FBC-06F6-45D4-9A4E-B5A80426628B/d:Views/d:Home/f:Index.cshtml" caret="3002" fromTop="14" />
     <File id="44A07FBC-06F6-45D4-9A4E-B5A80426628B/d:App_Start/f:BundleConfig.cs" caret="0" fromTop="0" />
-    <File id="44A07FBC-06F6-45D4-9A4E-B5A80426628B/d:Controllers/f:HomeController.cs" caret="3004" fromTop="68" />
+    <File id="44A07FBC-06F6-45D4-9A4E-B5A80426628B/d:Views/d:Home/f:Delete.cshtml" caret="872" fromTop="0" />
+    <File id="44A07FBC-06F6-45D4-9A4E-B5A80426628B/d:Views/d:Home/f:Edit.cshtml" caret="372" fromTop="18" />
+    <File id="44A07FBC-06F6-45D4-9A4E-B5A80426628B/d:Views/f:_ViewStart.cshtml" caret="0" fromTop="0" />
+    <File id="44A07FBC-06F6-45D4-9A4E-B5A80426628B/d:Controllers/f:HomeController.cs" caret="625" fromTop="18" />
+    <File id="44A07FBC-06F6-45D4-9A4E-B5A80426628B/d:Views/d:Home/f:Index.cshtml" caret="1733" fromTop="13" />
   </RecentFiles>
   <RecentEdits>
     <File id="44A07FBC-06F6-45D4-9A4E-B5A80426628B/d:App_Start/f:BundleConfig.cs" caret="4857" fromTop="40" />
-    <File id="44A07FBC-06F6-45D4-9A4E-B5A80426628B/d:Controllers/f:HomeController.cs" caret="2951" fromTop="23" />
-    <File id="44A07FBC-06F6-45D4-9A4E-B5A80426628B/d:Views/d:Home/f:Index.cshtml" caret="3002" fromTop="14" />
+    <File id="44A07FBC-06F6-45D4-9A4E-B5A80426628B/d:Views/d:Home/f:Delete.cshtml" caret="872" fromTop="0" />
+    <File id="44A07FBC-06F6-45D4-9A4E-B5A80426628B/d:Views/d:Home/f:Edit.cshtml" caret="178" fromTop="11" />
+    <File id="44A07FBC-06F6-45D4-9A4E-B5A80426628B/d:Controllers/f:HomeController.cs" caret="528" fromTop="13" />
+    <File id="44A07FBC-06F6-45D4-9A4E-B5A80426628B/d:Views/d:Home/f:Index.cshtml" caret="1733" fromTop="13" />
   </RecentEdits>
 </RecentFiles>

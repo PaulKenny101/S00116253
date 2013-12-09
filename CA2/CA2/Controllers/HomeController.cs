@@ -17,13 +17,11 @@ namespace CA2.Controllers
         //
         // GET: /Home/
 
-        public ActionResult Index(int? pageNumb)
+        public ActionResult Index()
         {
-            //number of results on page
-            int pageNumber = (pageNumb ?? 1);
-            int resultsReturned = 10;
-
-            var x = _db.Orders;
+            var x = (from o in _db.Orders
+                     join c in _db.Customers on o.CustomerID equals c.CustomerID
+                     select o);
          
             return View(x);
         }

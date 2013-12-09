@@ -1,5 +1,5 @@
-2013/12/06-18:07:47.900 180c Recovering log #22
-2013/12/06-18:07:47.900 180c Level-0 table #24: started
-2013/12/06-18:07:47.900 180c Level-0 table #24: 0 bytes OK
-2013/12/06-18:07:47.953 180c Delete type=0 #22
-2013/12/06-18:07:47.954 180c Delete type=3 #20
+2013/12/09-03:54:54.628 24fc Recovering log #25
+2013/12/09-03:54:54.629 24fc Level-0 table #27: started
+2013/12/09-03:54:54.641 24fc Level-0 table #27: 51015 bytes OK
+2013/12/09-03:54:54.651 24fc Delete type=0 #25
+2013/12/09-03:54:54.651 24fc Delete type=3 #23

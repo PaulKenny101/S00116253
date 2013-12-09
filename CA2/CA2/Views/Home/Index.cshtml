@@ -15,8 +15,11 @@
             @Html.DisplayNameFor(model => model.OrderID)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.CustomerID)
+            Company Name
         </th>
+@*        <th>
+            @Html.DisplayNameFor(model => model.CustomerID)
+        </th>*@
 @*        <th>
             @Html.DisplayNameFor(model => model.EmployeeID)
         </th>*@
@@ -58,12 +61,15 @@
 
 @foreach (var item in Model) {
     <tr>
-         <td>
+        <td>
             @Html.DisplayFor(modelItem => item.OrderID)
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.CustomerID)
+            @Html.DisplayFor(modelItem => item.Customer.CompanyName)
         </td>
+@*        <td>
+            @Html.DisplayFor(modelItem => item.CustomerID)
+        </td>*@
 @*        <td>
             @Html.DisplayFor(modelItem => item.EmployeeID)
         </td>*@
