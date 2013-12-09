@@ -8,7 +8,15 @@
     @Scripts.Render("~/bundles/modernizr")
 </head>
     <body>
-        <nav class=" navbar navbar-default navbar-fixed-top"></nav>
+        <nav class=" navbar navbar-default navbar-fixed-top">
+            
+            <ul class="nav navbar-nav">
+                <li>@Html.ActionLink("Home","Index","Home")</li>
+                <li>@Html.ActionLink("Employees","Index","Employee")</li>
+
+            </ul>
+
+        </nav>
         @RenderBody()
 
         @Scripts.Render("~/bundles/jquery")

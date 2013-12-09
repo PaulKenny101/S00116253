@@ -31,7 +31,11 @@ namespace CA2.Controllers
 
         public ActionResult Details(int id)
         {
-            return View();
+            var x = from o in _db.Employees
+                    where o.EmployeeID == id
+                    select o;
+
+            return View(x);
         }
 
         //
