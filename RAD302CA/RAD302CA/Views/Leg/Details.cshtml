@@ -1,0 +1,50 @@
+﻿@model RAD302CA.Models.Leg
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<fieldset>
+    <legend>Leg</legend>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.StartLocation)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.StartLocation)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.EndLocation)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.EndLocation)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.StartDate)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.StartDate)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.EndDate)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.EndDate)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Trip.TripName)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Trip.TripName)
+    </div>
+</fieldset>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id=Model.LegId }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

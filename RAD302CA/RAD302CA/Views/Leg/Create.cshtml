@@ -1,0 +1,72 @@
+﻿@model RAD302CA.Models.Leg
+
+@{
+    ViewBag.Title = "Create";
+}
+
+<h2>Create</h2>
+
+@using (Html.BeginForm()) {
+    @Html.AntiForgeryToken()
+    @Html.ValidationSummary(true)
+
+    <fieldset>
+        <legend>Leg</legend>
+        <div class="editor-label">
+            @Html.LabelFor(model => model.TripId, "Trip")
+        </div>
+        <div class="editor-field">
+            @Html.DropDownList("TripId", String.Empty)
+            @Html.ValidationMessageFor(model => model.TripId)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.StartLocation)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.StartLocation)
+            @Html.ValidationMessageFor(model => model.StartLocation)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.EndLocation)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.EndLocation)
+            @Html.ValidationMessageFor(model => model.EndLocation)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.StartDate)
+        </div>
+        <div class="editor-field">
+            @Html.TextBoxFor(model => model.StartDate,new{id = string.Format("startDate")})
+            @Html.ValidationMessageFor(model => model.StartDate)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.EndDate)
+        </div>
+        <div class="editor-field">
+            @Html.TextBoxFor(model => model.EndDate, new { id = string.Format("endDate") })
+            @Html.ValidationMessageFor(model => model.EndDate)
+        </div>
+
+        <p>
+            <input type="submit" value="Create" />
+        </p>
+    </fieldset>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+<script>
+    $('#startDate').datepicker({ format: 'dd/mm/yyyy' }); //Initialise any date pickers
+    $('#endDate').datepicker({ format: 'dd/mm/yyyy' });
+</script>
+
+}

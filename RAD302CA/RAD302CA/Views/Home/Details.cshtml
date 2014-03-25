@@ -1,0 +1,50 @@
+﻿@model RAD302CA.Models.Trip
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<fieldset>
+    <legend>Trip</legend>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.TripName)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.TripName)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.StartDate)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.StartDate)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.EndDate)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.EndDate)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.TripViable)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.TripViable)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.TripComplete)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.TripComplete)
+    </div>
+</fieldset>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id=Model.TripId }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

@@ -1,0 +1,24 @@
+﻿@model RAD302CA.Models.Leg
+
+@{
+    ViewBag.Title = "Add Guest to a Leg";
+}
+
+<h2>Add Guest</h2>
+
+
+<div class="editor-label">
+    @Html.LabelFor(model => model.Guests, "GuestName")
+</div>
+<div class="editor-field">
+    @Html.DropDownList("GuestName", String.Empty)
+    @Html.ValidationMessageFor(model => model.TripId)
+</div>
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}
